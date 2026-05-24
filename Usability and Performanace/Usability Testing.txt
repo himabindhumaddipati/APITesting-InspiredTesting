@@ -1,0 +1,35 @@
+Usability Testing Design:
+So first what I will do is understand how a normal user will actually use this Car Search feature. Like someone comes to Buggy Cars and they want to find a car by make, model or year. I will sit with few real users maybe 5 to 8 people and just watch them using the website. I will not help them, just observe where they are getting stuck or confused.
+Before I even start testing I will prepare a small task sheet. This sheet will have simple instructions like "find a Toyota Corolla from 2020" or "search for any SUV under a certain price." I will give this sheet to each user and ask them to do the tasks naturally. While they are doing it I will note down things like how long they are taking, where they are clicking wrongly, where they are stopping and looking confused. I will also record the screen if user gives permission so I can review later.
+After all users finish I will sit down and look at all my notes. If 4 out of 8 users had problem on same screen or same filter then that is a clear issue that needs to be fixed. I will then make a simple list of all problems I found and give each one a priority — high, medium or low depending on how badly it affected the user.
+The main things I want to check are — is the search easy to find on the page, are the filter options like make model year clearly labelled, and if someone searches something that has no result does the website show a helpful message or just blank page. Also I want to check on mobile because many users will open from phone.
+How to Get This Passed
+Once I have my list of issues I will share it with the developer team with clear explanation of each problem and what the fix should be. For example if users are not understanding the make dropdown I will suggest to add a placeholder text like "Select Car Brand" so it is more clear. After developers make the fix I will test that specific scenario again with one or two users to confirm the problem is gone. I will not move to next issue until current one is properly fixed and retested.
+For final sign off I will prepare a simple one page summary showing how many issues were found, how many are fixed, and test results before and after. I will present this to client and get their written approval. Only after that the feature is ready to go live.
+For test cases I will cover basic things like searching by only make, searching by all three filters together, clearing filters and searching again, and also what happens when wrong or no matching combination is selected. These simple scenarios will cover most of what real users will do.
+
+Performance Testing Strategy:
+For performance my approach will be first check how the website behaves normally, like how many seconds search takes when only few people are using. 
+That becomes my baseline. Then I will slowly increase the number of users using tool like JMeter and see at what point the search starts getting slow or giving error.
+Before I start any performance testing I will first speak to the client and find out when their website gets most traffic. Like is it weekends, is it end of month, is it during some sale period. 
+This helps me design realistic test scenarios instead of just random numbers. 
+I will also check with the developer team how the backend is set up — is it using a database directly or some caching layer — because this will tell me where the bottleneck is most likely to come from.
+Then I will set up JMeter with test scripts that simulate real user behaviour. 
+Not just hitting the search page but doing full flow — opening website, selecting make, selecting model, selecting year, clicking search, viewing results. 
+This is more realistic than just sending one request repeatedly.I will do a load test with maybe 200 to 500 users at same time, then a stress test pushing to 1000 users to find the breaking point. 
+I also want to run it for few hours with medium load to see if any slowness comes gradually over time. 
+For performance I will keep target that search result should come within 2 seconds and error rate should stay below 1 percent even under heavy load.
+During each test I will monitor not just response time but also server CPU usage, memory usage and database query time. Many times the website frontend looks fine but backend is struggling. 
+So checking all these together gives full picture of where exactly the problem is coming from.After each test run I will generate a report from JMeter showing graphs of response time over time, number of errors, and throughput. 
+If I see response time going above 2 seconds at 400 users for example I will flag that immediately and share with developer team. They will optimise the query or add caching and then I will run the test again to confirm improvement.How to Get This PassedFor performance sign off I will run final load test after all fixes are done and show the client a clean report where all numbers are within agreed targets.
+I will also do one final spike test just before go live to make sure website can handle sudden traffic increase. 
+Once client reviews the report and is satisfied I will get written approval and performance testing is considered passed.
+
+Client Collaboration:
+Before I start any testing I will have one meeting with client to understand their users and business. 
+Like which searches are most common, when is their peak traffic time, these things matter a lot for designing proper tests.
+During usability testing I will call the client to just sit and watch one or two sessions. 
+Reading a report is one thing but when they see with own eyes that real user is confused on some screen, they take the feedback more seriously.
+After testing I will share findings in simple language, not too much technical. For usability I will show them a list of issues with priority — what needs to be fixed urgently and what can wait. 
+For performance I will show graphs of how website behaved under load. Then we will sit together, decide what to fix first, and after fixes are done I will retest and get their final approval before going live.
+
